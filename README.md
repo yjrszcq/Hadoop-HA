@@ -43,6 +43,8 @@ Docker环境下的高可用Hadoop集群搭建
   - 自建NTP的 `docker-compose.yml` 已经包含在仓库中（如果您修改了集群网络的网段，注意把NTP的 `docker-compose.yml` 的网段也一同修改）
   - 注意：公共的NTP节点有一定概率连不上，导致容器启动失败，这时您只需要 `docker start 启动失败的容器` 即可启动，如果没有启动成功，可以多重复几遍
 
+- 多节点的配置，请用字符 `,` 分隔节点
+
 - ZooKeeper 和 JournalNode 的节点数量按需配置，但最好是奇数个，且都在 3 个或以上
 
 - JobHistoryServer，NameNode 的主备节点，ResourceManager 的主备节点各 1 个
