@@ -21,7 +21,7 @@ Docker环境下的高可用Hadoop集群搭建
 
 您可以使用 `hadoop-start.sh -i` 创建并启动容器，或者使用 `hadoop-start.sh` 启动容器
 
-注意：创建容器前，节点配置文件 `hadoop-env.conf` 必须要在与脚本相同的目录下
+- 注意：创建容器前，节点配置文件 `hadoop-env.conf` 必须要在与脚本相同的目录下
 
 ### 停止容器
 
