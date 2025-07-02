@@ -1,0 +1,29 @@
+#!/bin/bash
+set -ex
+
+# 定义集群配置文件路径
+CLUSTER_CONF="/opt/cluster.conf"
+
+if [ ${DATA_NODE} != ${NODE_MANAGER} ]; then
+    echo "暂不支持DataNode与NodeManager分离"
+    exit 1
+fi
+
+# 创建配置文件并写入环境变量
+cat << EOF > "${CLUSTER_CONF}"
+ZOO_SERVER=${ZOO_SERVER}
+JOURNAL_NODE=${JOURNAL_NODE}
+JOB_HISTORY_SERVER=${JOB_HISTORY_SERVER}
+ACTIVE_NAME_NODE=${ACTIVE_NAME_NODE}
+STANDBY_NAME_NODE=${STANDBY_NAME_NODE}
+ACTIVE_RESOURCE_MANAGER=${ACTIVE_RESOURCE_MANAGER}
+STANDBY_RESOURCE_MANAGER=${STANDBY_RESOURCE_MANAGER}
+DATA_NODE=${DATA_NODE}
+NODE_MANAGER=${NODE_MANAGER}
+EOF
+
+# 设置文件权限（可选）
+chmod 644 "${CLUSTER_CONF}"
+chown -R yjrszcq:bigdata "${CLUSTER_CONF}"
+
+echo "配置文件已生成：${CLUSTER_CONF}"
