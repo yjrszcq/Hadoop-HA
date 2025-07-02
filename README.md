@@ -12,7 +12,7 @@ Docker环境下的高可用Hadoop集群搭建
   - `./moudle` ：jdk
 - hadoop 版本默认 2.7.7，如果需要更高的版本
   - 可能需要修改 hadoop 的配置文件（与当前版本不兼容的配置）
-  - 可能需要修改 `./scripts/cluster-cmd` （与当前版本不兼容的命令）
+  - 可能需要修改 `./scripts/cluster-cmd.sh` （与当前版本不兼容的命令）
 
 ## 容器相关
 
