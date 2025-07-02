@@ -4,7 +4,15 @@ Docker环境下的高可用Hadoop集群搭建
 
 ## 镜像搭建
 
-您可以使用 `rebuild.sh` 快速搭建镜像，重建镜像也可以使用这个脚本
+您可以使用 `rebuild.sh` 快速搭建镜像
+
+- 重建镜像也可以使用这个脚本
+- 注意：hadoop，zookeeper，jdk需要提前下载到指定目录
+  - `./software` ：hadoop，zookeeper
+  - `./moudle` ：jdk
+- hadoop 版本默认 2.7.7，如果需要更高的版本
+  - 可能需要修改 hadoop 的配置文件（与当前版本不兼容的配置）
+  - 可能需要修改 `./scripts/cluster-cmd` （与当前版本不兼容的命令）
 
 ## 容器相关
 
