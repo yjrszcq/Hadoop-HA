@@ -52,3 +52,24 @@ Docker环境下的高可用Hadoop集群搭建
 
 - DataNode 和 NodeManager 暂时不支持分离配置，请确保这两种节点的配置相同，数量上至少 3 个
   - 启动脚本 `hadoop-start.sh` 由于 IP 配置方式，仅支持最多 250 个左右，需要更多请自行修改启动脚本
+
+## 使用相关
+
+以下是各主要节点的 Web 访问地址
+
+- NameNode
+```
+http://localhost:50070/
+```
+
+- ResourceManager
+```
+http://localhost:8088/
+```
+
+- JobHistoryServer
+```
+http://localhost:19888/
+```
+
+
