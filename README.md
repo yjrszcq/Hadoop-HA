@@ -6,9 +6,9 @@ Docker环境下的高可用Hadoop集群搭建
 
 此项目的镜像已经上传至 [Docker Hub](https://hub.docker.com/r/szcq/hadoop)，您可以直接使用 `hadoop-start.sh -i` 创建并启动容器。
 
-- 注意
-  - `hadoop-start.sh` 并不包含 NTP 服务器的搭建，若您需要本地的 NTP 服务，请自行搭建，相关 `docker-compose.yml` 已包含在本仓库中
-  - `hadoop-start.sh` 并不会自动生成节点的配置文件，请参考本仓库中的配置文件 `hadoop-env.conf` 自行配置节点
+注意
+- `hadoop-start.sh` 并不包含 NTP 服务器的搭建，若您需要本地的 NTP 服务，请自行搭建，相关 `docker-compose.yml` 已包含在本仓库中
+- `hadoop-start.sh` 并不会自动生成节点的配置文件，请参考本仓库中的配置文件 `hadoop-env.conf` 自行配置节点
   - 详细的使用方法请从 **容器相关** 部分开始往后阅读
 
 ## 镜像搭建
